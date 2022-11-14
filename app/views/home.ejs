@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon agenda</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Mon agenda</h1>
+    <h2>Mes contacts :</h2>
+
+    <ul>
+        <% for(const contact of contacts){ %>
+        <li><a href="/contact/<%= contact.id %>"><%= contact.id %> - <%= contact.first_name %> <%= contact.last_name %></a></li>
+        <% } %>
+    </ul>
+
+    <h2>Ajouter un contact</h2>
+    <form action="" method="POST">
+        <label for="firstName">Prénom</label>
+        <input type="text" name="firstName">
+        <label for="lastName">Nom</label>
+        <input type="text" name="lastName">
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>
